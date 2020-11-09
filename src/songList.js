@@ -104,6 +104,6 @@ function chillHop() {
       active: false,
     }
   ];
-}
+};
 
 export default chillHop;

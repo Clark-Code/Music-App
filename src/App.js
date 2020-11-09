@@ -2,14 +2,17 @@
 import React, {useState} from "react";
 import Song from "./components/Song";
 import Player from "./components/Player";
-import "./styles/app.scss"
-import data from './songList';
+import Library from './components/Library';
+import "./styles/app.scss";
+import SongList from './songList';
+
+
 
 
 function App() {
 
   //state
-  const [songs, setSongs] = useState(data());
+  const [songs, setSongs] = useState(SongList());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -22,8 +25,9 @@ function App() {
       isPlaying={isPlaying} 
       currentSong={currentSong}
       />
+      <Library songs={songs} />
     </div>
   );
-}
+};
 
 export default App;
