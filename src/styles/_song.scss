@@ -1,17 +1,39 @@
 .song-container {
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    img{
-        width: 20%;
-        border-radius: 50%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 25%;
+    border-radius: 50%;
+    transition: all 2s ease;
+  }
+  h2 {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.rotateSong {
+  animation: rotate 50s linear forwards infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .song-container {
+    img {
+      width: 60%;
     }
-    h2{
-        padding: 3rem 1rem 1rem 1rem;
-    }
-    h3{
-        font-size: 1rem;
-    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

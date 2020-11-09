@@ -1,17 +1,29 @@
 nav {
-    min-height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    button{
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        border: 2px solid rgb(65, 65, 65);
-        padding: 0.75rem;
-        transition: all 0.3s ease;
-        &:hover{
-            background: rgb(228, 200, 252);
-        }      
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 2px solid rgb(65, 65, 65);
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgb(228, 200, 252);
+      color: white;
     }
+  }
+  .library-active {
+    background: rgb(65, 65, 65);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
+    }
+  }
 }

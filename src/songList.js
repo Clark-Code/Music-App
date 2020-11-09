@@ -102,8 +102,8 @@ function chillHop() {
       color: ["#654898", "#F6D3EC"],
       id: uuidv4(),
       active: false,
-    }
+    },
   ];
-};
+}
 
 export default chillHop;
